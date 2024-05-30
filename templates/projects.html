@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock title %}
+
+{% block content %}
+<div class='bg-gray-800 text-white p-5 md:py-8 md:px-20 lg:px-40 xl:px-60'>
+  <p style="font-family: Poppins-Bold" class='text-4xl font-extrabold py-5 text-center md:text-start'>Projects Completed</p>
+      <div style="box-shadow:0 5px 30px 0 rgba(0,0,0,.05);" class='flex flex-col md:flex-row gap-4 md:gap-x-8 bg-gray-900 p-5 mb-4 rounded-lg'>
+        <img class="post-img-url rounded-lg object-cover" width='350px' height='180px' src="{% static 'images/obj.png' %}" alt="image">
+        <div>
+          <p style="font-family: Poppins-Bold" class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-600">Object Detection on Raspberry Pi</p>
+          <p class='text-justify my-3'>This project demonstrates an object detection system running on a Raspberry Pi using YOLOv8. The system was trained on custom data and tested to accurately detect objects in real-time. A recorded output video is available for demo purposes.</p>
+          <ul class='mb-3'>
+            <li>&#9989; Real-time Object Detection</li>
+            <li>&#9989; Custom Dataset Training</li>
+            <li>&#9989; YOLOv8 Model</li>
+          </ul>
+          <span class='text-lg font-bold'>Technologies used</span><br>
+          <div class='flex space-x-2 my-3'>
+          <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-brands fa-python"></i> Python</span>
+          <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-solid fa-file-code"></i> YAML</span>
+          {% comment %} <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-solid fa-image"></i> PNG</span> {% endcomment %}
+          </div>
+          <div class='flex space-x-4 my-3'>
+            <a href='https://drive.google.com/file/d/1MrHhWGbSIN_WS503nxFLyrCxuwxcjqif/view?usp=sharing' target = '_blank'><button class='bg-blue-600 p-2 px-4 rounded-[6px] hover:bg-gray-800 hover:outline hover:outline-blue-600 transition delay-75 ease-in-out my-3'>Demo <i class="bi bi-box-arrow-up-right"></i></button></a>
+          </div>
+        </div>
+      </div>     
+      <div style="box-shadow:0 5px 30px 0 rgba(0,0,0,.05);" class='flex flex-col md:flex-row gap-4 md:gap-x-8 bg-gray-900 p-5 mb-4 rounded-lg'>
+          <img class="post-img-url rounded-lg object-cover" width='350px' height='180px' src="{% static 'images/hus.png' %}" alt="image">
+          {% comment %} https://cdn.jsdelivr.net/gh/hostmind/host/static/password-generator.png {% endcomment %}
+          <div>
+            <p style="font-family: Poppins-Bold" class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-600">Hospital User System<p>
+            <p class='text-justify my-3'>A Hospital website made by using HTML, CSS, JavaScript and Django. Doctors can post blogs and can see the daily appointments. Patients can see the available doctors and book appointment if doctor is free at that time.</p>
+            <ul class='mb-3'>
+              <li>&#9989; Developed a Hospital user System using Python and sqlite3</li>
+              <li>&#9989;  Doctor can perform CRUD operations on Blogs.</li>
+              <li>&#9989;  Simple and easy to use website.
+              </li>
+            </ul>
+            <span class='text-lg font-bold'>Technologies used</span><br>
+            <div class='flex space-x-2 my-3'>
+            <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-brands fa-python"></i> Python</span>
+            <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-solid fa-server"></i> SQL</span>
+            </div>
+            <div class='flex space-x-4 my-3'>
+              <a href='https://github.com/Rohitthakan/HospitalUserSystem'  target = '_blank' class=''><button class='bg-gray-800 p-2 px-4 rounded-[6px] hover:bg-slate-700 outline hover:outline-none outline-slate-700 transition delay-75 ease-in-out my-3'><i class="bi bi-github"></i> Github</button></a>
+              <a href='https://hospitalusersystem.pythonanywhere.com/' target = '_blank'><button class='bg-blue-600 p-2 px-4 rounded-[6px] hover:bg-gray-800 hover:outline hover:outline-blue-600 transition delay-75 ease-in-out my-3'>Demo <i class="bi bi-box-arrow-up-right"></i></button></a>              
+            </div>
+          </div>
+      </div>
+      <div style="box-shadow:0 5px 30px 0 rgba(0,0,0,.05);" class='flex flex-col md:flex-row gap-4 md:gap-x-8 bg-gray-900 p-5 mb-4 rounded-lg'>
+          <img class="post-img-url rounded-lg object-cover" width='350px' height='180px' src="{% static 'images/cr.png' %}" alt="image">
+          <div>
+            <p style="font-family: Poppins-Bold" class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-600">College Repository</p>
+            <p class='text-justify my-3'>College Repository is a website build using HTML, CSS, JavaScript and Django. Students can find old question papers so that they can prepare for exams, also students can upload question papers if it is not available on website.</p>
+            <ul class='mb-3'>
+              <li>&#9989; Innovative and Modern Design</li>
+              <li>&#9989; Wide Range of Tools</li>
+              <li>&#9989; Responsive Design</li>
+            </ul>
+            <span class='text-lg font-bold'>Technologies used</span><br>
+            <div class='flex space-x-2 my-3'>
+            <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-brands fa-html5"></i> HTML</span>
+            <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-brands fa-css3-alt"></i> CSS</span>
+            <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-brands fa-square-js"></i> Js</span>
+            </div>
+            <div class='flex space-x-4 my-3'>
+              <a href='https://github.com/Rohitthakan/CollegeRepository'  target = '_blank' class=''><button class='bg-gray-800 p-2 px-4 rounded-[6px] hover:bg-slate-700 outline hover:outline-none outline-slate-700 transition delay-75 ease-in-out my-3'><i class="bi bi-github"></i> Github</button></a>
+              <a href='https://collegerepository.pythonanywhere.com/' target = '_blank'><button class='bg-blue-600 p-2 px-4 rounded-[6px] hover:bg-gray-800 hover:outline hover:outline-blue-600 transition delay-75 ease-in-out my-3'>Demo <i class="bi bi-box-arrow-up-right"></i></button></a>              
+            </div>
+          </div>
+      </div>
+      <div style="box-shadow:0 5px 30px 0 rgba(0,0,0,.05);" class='flex flex-col md:flex-row gap-4 md:gap-x-8 bg-gray-900 p-5 mb-4 rounded-lg'>
+          <img class="post-img-url rounded-lg object-cover" width='350px' height='180px' src="{% static 'images/mcoders.png' %}" alt="image">
+          <div>
+            <p style="font-family: Poppins-Bold" class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-600">Mountain Coders</p>
+            <p class='text-justify my-3'>Mountain Coders is a comprehensive website that offers a variety of useful blogs. The website was created using HTML, CSS, and JavaScript, Django and has a modern and user-friendly design.</p>
+            <ul class='mb-3'>
+              <li>&#9989; Wide variety of blogs</li>
+              <li>&#9989; Easy Navigation</li>
+              <li>&#9989; Search option Supported</li>
+            </ul>
+            <span class='text-lg font-bold'>Technologies used</span><br>
+            <div class='flex space-x-2 my-3'>
+              <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-brands fa-html5"></i> HTML</span>
+              <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-brands fa-python"></i> Python</span>
+              <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-brands fa-square-js"></i> Js</span>
+            </div>
+            <div class='flex space-x-4 my-3'>
+              <a href='https://github.com/Rohitthakan/blogwebsite'  target = '_blank' class=''><button class='bg-gray-800 p-2 px-4 rounded-[6px] hover:bg-slate-700 outline hover:outline-none outline-slate-700 transition delay-75 ease-in-out my-3'><i class="bi bi-github"></i> Github</button></a>
+            </div>
+          </div>
+      </div>
+      <div class='flex justify-center'>
+        <a href='https://github.com/Rohitthakan' target='_blank' class=''><button class='bg-gray-800 p-2 px-4 rounded-[6px] hover:bg-blue-600 outline hover:outline-none outline-blue-600 transition delay-75 ease-in-out my-3'>Load more <i class="bi bi-arrow-clockwise font-extrabold"></i></button></a>
+      </div>
+</div>
+      {% endblock %}
