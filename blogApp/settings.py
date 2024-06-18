@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-v+r480m@z6_x@hh4w#fq6t8zqrfo8+d@2823@eu7vntl!cz=%o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -47,16 +47,15 @@ INSTALLED_APPS = [
 
 TAILWIND_APP_NAME = 'theme'
 
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
+# INTERNAL_IPS = [
+#     "127.0.0.1",
+# ]
 
-NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
+# NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
 
 MIDDLEWARE = [
-    "django_browser_reload.middleware.BrowserReloadMiddleware",
     'django.middleware.security.SecurityMiddleware',
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -99,7 +98,7 @@ DATABASES = {
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'railway',                      
+#         'NAME': 'railway',
 #         'USER': 'postgres',
 #         'PASSWORD': 'cqGiSNnstwaz2lyPFb4N',
 #         'HOST': 'containers-us-west-69.railway.app',
@@ -142,17 +141,37 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
-MEDIA_URL = 'media/'
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
+# STATIC_URL = 'static/'
+# if DEBUG:
+#   STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# else:
+#   STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#   STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+
+STATIC_URL = 'static/'
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# Ensure this directory exists and is writeable
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+if not DEBUG:
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+
+# MEDIA_URL = 'media/'
 
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, "static"),
 # ]
-
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 
 # EMAIL CONFIGURATION (for contact form)
