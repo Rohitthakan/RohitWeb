@@ -10,6 +10,5 @@ urlpatterns = [
     path('projects', views.projects, name='projects'),
     path('blogpost/<str:slug>', views.blogpost, name='blogpost'),
     path('category/<str:category>', views.category, name='category'),
-    path('categories/', views.categories, name='categories'),
-    # path('search/', views.search, name='search'),
+    path('categories/', views.categories, name='categories')
 ]

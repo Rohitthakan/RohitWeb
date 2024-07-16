@@ -96,22 +96,6 @@ def categories(request):
     all_categories = Blog.objects.values('category').distinct().order_by('category')
     return render(request, "categories.html", {'all_categories': all_categories})
 
-# def search(request):
-#     query = request.GET.get('q')
-#     query_list = query.split()
-#     results = Blog.objects.none()
-#     for word in query_list:
-#         results = results | Blog.objects.filter(Q(title__contains=word) | Q(content__contains=word)).order_by('-time')
-#     paginator = Paginator(results, 3)
-#     page = request.GET.get('page')
-#     results = paginator.get_page(page)
-#     if len(results) == 0:
-#         message = "Sorry, no results found for your search query."
-#     else:
-#         message = ""
-#     return render(request, 'search.html', {'results': results, 'query': query, 'message': message})
-
-
 
 def blogpost (request, slug):
     try:
