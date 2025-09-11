@@ -1,7 +1,7 @@
 import os
 import django
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "yourproject.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "blogApp.settings")
 django.setup()
 
 from django.contrib.auth.models import User
@@ -15,3 +15,4 @@ if not User.objects.filter(username=username).exists():
     print("Superuser created ✅")
 else:
     print("Superuser already exists 🚀")
+
