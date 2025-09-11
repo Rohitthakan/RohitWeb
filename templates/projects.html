@@ -6,6 +6,79 @@
 {% block content %}
 <div class='bg-gray-800 text-white p-5 md:py-8 md:px-20 lg:px-40 xl:px-60'>
   <p style="font-family: Poppins-Bold" class='text-4xl font-extrabold py-5 text-center md:text-start'>Projects Completed</p>
+
+      <div style="box-shadow:0 5px 30px 0 rgba(0,0,0,.05);" class='flex flex-col md:flex-row gap-4 md:gap-x-8 bg-gray-900 p-5 mb-4 rounded-lg'>
+        <img class="post-img-url rounded-lg object-cover" width='350px' height='180px' src="{% static 'images/screenshot1.png' %}" alt="Carbon Emission Tracker">
+        <div>
+          <p style="font-family: Poppins-Bold" class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-600">
+            Carbon Emissions Tracker (Chrome Extension)
+          </p>
+          <p class='text-justify my-3'>
+            Developed an open-source Chrome Extension that tracks and visualizes the carbon footprint of web browsing by estimating CO<sub>2</sub> emissions from data usage. 
+            Includes real-time browsing impact visualization and website categorization based on sustainability.
+          </p>
+          <ul class='mb-3'>
+            <li>&#9989; Session-based & All-time Emissions Tracking</li>
+            <li>&#9989; Website Categorization: Green / Semi-Green / Non-Green</li>
+            <li>&#9989; Real-time Browsing Impact Visualization</li>
+            <li>&#9989; Tested via Chrome’s <code>Load Unpacked</code> feature</li>
+          </ul>
+          <span class='text-lg font-bold'>Technologies used</span><br>
+          <div class='flex space-x-2 my-3'>
+            <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-solid fa-code"></i> HTML</span>
+            <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-solid fa-paintbrush"></i> CSS</span>
+            <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-brands fa-chrome"></i> Chrome APIs</span>
+          </div>
+          <div class='flex space-x-4 my-3'>
+            <a href='https://github.com/Rohitthakan/Carbon-Emission-Tracker-Extension' target='_blank'>
+              <button class='bg-blue-600 p-2 px-4 rounded-[6px] hover:bg-gray-800 hover:outline hover:outline-blue-600 transition delay-75 ease-in-out my-3'>
+                GitHub <i class="bi bi-box-arrow-up-right"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div style="box-shadow:0 5px 30px 0 rgba(0,0,0,.05);" class='flex flex-col md:flex-row gap-4 md:gap-x-8 bg-gray-900 p-5 mb-4 rounded-lg'>
+        <img class="post-img-url rounded-lg object-cover" width='350px' height='180px' src="{% static 'images/env.png' %}" alt="image">
+        <div>
+          <p style="font-family: Poppins-Bold" class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 via-blue-300 to-blue-600">
+            env-check-utils (Python Package)
+          </p>
+          <p class='text-justify my-3'>
+            Developed a Python package to inspect, validate, and manage environment variables and <code>.env</code> files. 
+            Features include schema validation, unused variable detection, schema auto-generation, and codebase scanning. 
+            Complete project documentation is hosted on Read the Docs.
+          </p>
+          <ul class='mb-3'>
+            <li>&#9989; Schema Validation</li>
+            <li>&#9989; Unused Variable Detection</li>
+            <li>&#9989; Schema Auto-Generation</li>
+            <li>&#9989; Codebase Scanning</li>
+          </ul>
+          <span class='text-lg font-bold'>Technologies used</span><br>
+          <div class='flex space-x-2 my-3'>
+            <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-brands fa-python"></i> Python</span>
+            <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-solid fa-file-code"></i> JSON Schema</span>
+            <span class='text-xs bg-gradient-to-r from-cyan-500 to-blue-500 py-1 px-4 rounded-full'><i class="fa-solid fa-code"></i> Regex</span>
+          </div>
+          <div class='flex space-x-4 my-3'>
+            <a href='https://pypi.org/project/env-check-utils/' target='_blank'>
+              <button class='bg-blue-600 p-2 px-4 rounded-[6px] hover:bg-gray-800 hover:outline hover:outline-blue-600 transition delay-75 ease-in-out my-3'>
+                PyPI <i class="bi bi-box-arrow-up-right"></i>
+              </button>
+            </a>
+            <a href='https://env-check-utils.readthedocs.io/en/latest/' target='_blank'>
+              <button class='bg-blue-600 p-2 px-4 rounded-[6px] hover:bg-gray-800 hover:outline hover:outline-blue-600 transition delay-75 ease-in-out my-3'>
+                Docs <i class="bi bi-book"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+  
       <div style="box-shadow:0 5px 30px 0 rgba(0,0,0,.05);" class='flex flex-col md:flex-row gap-4 md:gap-x-8 bg-gray-900 p-5 mb-4 rounded-lg'>
         <img class="post-img-url rounded-lg object-cover" width='350px' height='180px' src="{% static 'images/obj.png' %}" alt="image">
         <div>
