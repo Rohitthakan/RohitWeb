@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-v+r480m@z6_x@hh4w#fq6t8zqrfo8+d@2823@eu7vntl!cz=%o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['rohitweb.onrender.com']
+ALLOWED_HOSTS = ['rohit-web.onrender.com']
 
 
 # Application definition
