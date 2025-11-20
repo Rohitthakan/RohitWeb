@@ -1,7 +1,7 @@
-name: Backup SQLite DB from Render
+name: Backup SQLite DB from Render and Redeploy
 
 on:
-  workflow_dispatch:   # Manual trigger
+  workflow_dispatch:   # Run manually ONLY when you want updated deployment
 
 permissions:
   contents: write
@@ -23,5 +23,5 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git config --global user.name "GitHub Actions"
           git add db.sqlite3
-          git commit -m "Backup: updated db.sqlite3 from Render" || echo "No changes to commit"
+          git commit -m "Auto-backup DB before deploy" || echo "No changes"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Rohitthakan/RohitWeb.git HEAD:main
