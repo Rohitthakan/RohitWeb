@@ -3,6 +3,9 @@ name: Backup SQLite DB from Render
 on:
   workflow_dispatch:   # Manual trigger
 
+permissions:
+  contents: write
+
 jobs:
   backup:
     runs-on: ubuntu-latest
