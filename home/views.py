@@ -108,3 +108,22 @@ def blogpost (request, slug):
     except Blog.DoesNotExist:
         context = {'message': 'Blog post not found'}
         return render(request, '404.html', context, status=404)
+
+
+from django.http import FileResponse, HttpResponseForbidden
+import os
+from django.conf import settings
+
+def download_db(request):
+    # SIMPLE SECURITY: use a token so no one else can download your DB
+    token = request.GET.get("token")
+
+    # IMPORTANT: Set this same token in Render Environment Variables later
+    SECRET_TOKEN = os.environ.get("DB_DOWNLOAD_TOKEN")
+
+    if token != SECRET_TOKEN:
+        return HttpResponseForbidden("Unauthorized")
+
+    db_path = os.path.join(settings.BASE_DIR, 'db.sqlite3')
+
+    return FileResponse(open(db_path, 'rb'), as_attachment=True, filename='db.sqlite3')
