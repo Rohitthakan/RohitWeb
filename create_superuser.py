@@ -6,15 +6,16 @@ django.setup()
 
 from django.contrib.auth.models import User
 
-username = "your_username"
+username = "**your_username**"
 email = "example@gmail.com"
-password = "your_password"
+password = "**your_password**"
 
 if not User.objects.filter(username=username).exists():
     User.objects.create_superuser(username, email, password)
     print("Superuser created ✅")
 else:
     print("Superuser already exists 🚀")
+
 
 
 
