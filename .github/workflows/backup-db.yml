@@ -24,4 +24,4 @@ jobs:
           git config --global user.name "GitHub Actions"
           git add db.sqlite3
           git commit -m "Backup: updated db.sqlite3 from Render" || echo "No changes to commit"
-          git push
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Rohitthakan/RohitWeb.git HEAD:main
