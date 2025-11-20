@@ -111,19 +111,15 @@ def blogpost (request, slug):
 
 
 from django.http import FileResponse, HttpResponseForbidden
-import os
 from django.conf import settings
+import os
 
-def download_db(request):
-    # SIMPLE SECURITY: use a token so no one else can download your DB
+def backup_db_view(request):
     token = request.GET.get("token")
-
-    # IMPORTANT: Set this same token in Render Environment Variables later
-    SECRET_TOKEN = os.environ.get("DB_DOWNLOAD_TOKEN")
+    SECRET_TOKEN = os.environ.get("DB_DOWNLOAD_TOKEN")  # put this in Render env
 
     if token != SECRET_TOKEN:
         return HttpResponseForbidden("Unauthorized")
 
     db_path = os.path.join(settings.BASE_DIR, 'db.sqlite3')
-
     return FileResponse(open(db_path, 'rb'), as_attachment=True, filename='db.sqlite3')
