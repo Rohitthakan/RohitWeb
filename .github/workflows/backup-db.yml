@@ -16,7 +16,7 @@ jobs:
 
       - name: Download latest database from Render
         run: |
-          curl -L "https://rohit-web.onrender.com/download-db/?token=mysecret123" -o db.sqlite3
+          curl -L "https://rohit-web.onrender.com/backup-db/?token=mysecret123" -o db.sqlite3
 
       - name: Commit and push updated database
         run: |
