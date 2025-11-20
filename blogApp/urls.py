@@ -11,8 +11,8 @@ from home.views import backup_db_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
+    path('backup-db/', backup_db_view, name='backup-db'),
     path('', include('home.urls')),
-    path('backup-db/', backup_db_view, name='backup-db')
     # url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
     # url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]
