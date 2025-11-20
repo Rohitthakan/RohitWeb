@@ -1,0 +1,24 @@
+name: Backup SQLite DB from Render
+
+on:
+  workflow_dispatch:   # Manual trigger
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Download latest database from Render
+        run: |
+          curl -L "https://rohit-web.onrender.com/download-db/?token=mysecret123" -o db.sqlite3
+
+      - name: Commit and push updated database
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add db.sqlite3
+          git commit -m "Backup: updated db.sqlite3 from Render" || echo "No changes to commit"
+          git push
