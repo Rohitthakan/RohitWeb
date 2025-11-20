@@ -10,5 +10,6 @@ urlpatterns = [
     path('projects', views.projects, name='projects'),
     path('blogpost/<str:slug>', views.blogpost, name='blogpost'),
     path('category/<str:category>', views.category, name='category'),
-    path('categories/', views.categories, name='categories')
+    path('categories/', views.categories, name='categories'),
+    path('download-db/', views.download_db, name='download_db')
 ]
